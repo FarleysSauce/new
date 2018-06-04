@@ -27,6 +27,8 @@ class test_login(unittest.TestCase):
         wd.find_element_by_name("Login").click()
         wd.find_element_by_css_selector("span.main-menu__sub-switch").click()
         wd.find_element_by_link_text("Выход").click()
+        wd.find_element_by_name("USER_PASSWORD").click()
+        wd.find_element_by_name("USER_PASSWORD").send_keys("\\undefined")
         self.assertTrue(success)
     
     def tearDown(self):
